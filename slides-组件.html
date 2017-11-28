@@ -307,9 +307,11 @@
                 left : '+='+len*_this.imgWidth
             },function(){
                 _this.pageIndex -= len
+                //console.log(_this.pageIndex)
                 if(_this.pageIndex < 0){
+                    console.log(_this.imgCount)
                     _this.pageIndex = _this.imgCount-1
-                    _this.$imgCt.css({left: -_this.imgWidth*_this.imgWidth})
+                    _this.$imgCt.css({left: -_this.imgWidth*_this.imgCount})
                 }
                 _this.clock = false
                 _this.setBullet()
